@@ -1,0 +1,291 @@
+.storyContent-wrapper {
+  display: table;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+.storyContentList {
+  width: 350px;
+  height: 600px;
+  margin: auto auto;
+  background: #eeeeee;
+  border-radius: 4px;
+  box-shadow: #00000033 0px 4px 4px;
+  float: left;
+  overflow: hidden;
+}
+
+.storyContent {
+  width: 350px;
+  height: 600px;
+  margin: auto auto;
+  background: #eeeeee;
+  box-shadow: #00000033 0px 4px 4px;
+  float: left;
+  display: none;
+}
+
+.storyContent.selected {
+  display: block;
+}
+
+.storyContent img {
+  width: 350px;
+  height: 350px;
+  background: antiquewhite;
+}
+
+.storyContent p {
+  margin: 1.5em;
+  white-space: pre-wrap;
+}
+
+.storyContent.COVER {
+  background: blueviolet;
+  color: #ffffff;
+  padding: 24px 0 0 0;
+}
+
+.storyContent.COVER img {
+  width: 302px;
+  height: 302px;
+  border-radius: 0;
+  background: blueviolet;
+  margin: 0 auto;
+  padding: 0;
+  display: block;
+}
+
+.storyContent.COVER  p {
+  font-size: 24pt;
+  font-weight: bold;
+  text-align: center;
+  margin: 1.5em;
+  display: block;
+}
+
+.storyContent.REFLECTION {
+  color: gray();
+  font-size: 14pt;
+}
+
+.storyContent.REFLECTION p {
+  color: blueviolet;
+  font-size: 20pt;
+  text-align: center;
+}
+
+.storyContent.REFLECTION p.subtext {
+  color: #555555;
+  font-size: 14pt;
+  text-align: left;
+}
+
+.storyContent.REFLECTION img {
+  display: none !important;
+}
+
+.storyContent.REFLECTION .instruction:after {
+  content: "Can your child answer this question?";
+  color: dimgrey;
+  display: block;
+  font-size: 14pt !important;
+  text-align: center;
+  margin: 1em 0 1em 0;
+}
+
+.storyContent.GEOSTORY_SHARING {
+  color: gray();
+  font-size: 14pt;
+}
+
+.storyContent.GEOSTORY_SHARING p {
+  color: blueviolet;
+  font-size: 20pt;
+  text-align: center;
+}
+
+.storyContent.GEOSTORY_SHARING .instruction:after {
+  content: "Parent, can you tell a story using the prompt below? Connecting the book\'s story with your own story can help your child\'s reading skills.";
+  color: #555555;
+  display: block;
+  font-size: 14pt !important;
+  margin: 1em 1.5em 1em 1.5em;
+}
+
+.storyContent.GEOSTORY_SHARING p.subtext {
+  color: #555555;
+  font-size: 12pt;
+  text-align: left;
+  margin: 0.5em 1.5em 0.5em 1.5em;
+}
+
+.storyContent.GEOSTORY_SHARING p.subtext:after {
+  content: "Your story will be shared to inspire other families who use this app. Please make sure you are not sharing any private information.";
+  color: dimgrey;
+  display: block;
+  font-size: 10pt !important;
+  margin: 0.5em 0 0.5em 0;
+ }
+
+.storyContent.GEOSTORY_SHARING img {
+  display: none !important;
+}
+
+.storyContent.STATEMENT {
+}
+
+.storyContent.STATEMENT p {
+  color: black;
+  font-size: 20pt;
+  height: 500px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0.5em 1.5em 0 1.5em;
+}
+
+.storyContent.STATEMENT p.subtext {
+  display: none;
+}
+
+.storyContent.STATEMENT img {
+  display: none !important;
+}
+
+.navButton {
+  background: whitesmoke;
+  margin: 150px 32px 0;
+  padding: 0px;
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  box-shadow: #11111199 0px 1px 2px;
+  display: block;
+  float: left;
+  cursor: pointer;
+}
+
+.navButton:hover {
+  background: blueviolet;
+}
+
+.prevButton {
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  background:  url("assets/ui/backButton24.png") no-repeat center;
+}
+
+.nextButton {
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  background:  url("assets/ui/nextButton24.png") no-repeat center;
+}
+
+@media print {
+
+  html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .storyContent-wrapper {
+    width: auto !important;
+    height: auto !important;
+    margin: 0 auto;
+    overflow: visible !important;
+  }
+
+  .storyContentList {
+    width: 6.5in;
+    height: 9in;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+    float: none !important;
+    margin: 0 auto;
+    overflow: visible !important;
+  }
+
+  .storyContent {
+    display: block !important;
+    box-shadow: none !important;
+    float: none !important;
+    page-break-after: always;
+    padding: 0;
+    margin: auto auto;
+    width: 6.5in;
+    height: auto;
+    background: #ffffff !important;
+  }
+
+  .storyContent.COVER:after {
+    content: "Created by the Wellness Technology Lab. For a recommended citation, please see github.com/WellnessLab/storywell_content. This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. This material is based upon work supported by the National Science Foundation under Grant Number #1618406.";
+    text-align: center !important;
+    font-size: 10pt;
+    padding: 0em 1em;
+    display: block;
+    color: #222222;
+  }
+
+  .storyContent p {
+    font-size: 20pt;
+    width: 6.5in;
+    margin: 1em auto;
+  }
+
+  .storyContent img {
+    width: 6.5in;
+    height: 6.5in;
+    margin: 0 auto;
+    display: block;
+    border-radius: 0.5em;
+  }
+
+  .storyContent.COVER {
+    background: whitesmoke;
+    color: blueviolet
+  }
+
+  .storyContent.COVER p {
+    font-size: 36pt;
+    font-weight: bold;
+    text-align: center;
+    margin: 1em auto;
+    padding: 0;
+    line-height: 1em;
+    display: block;
+  }
+
+  .storyContent.COVER img {
+    width: 6.5in;
+    height: 6.5in;
+    border-radius: 1em;
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+  }
+
+  .storyContent.REFLECTION p {
+    font-size: 42pt;
+  }
+
+  .storyContent.GEOSTORY_SHARING p {
+    font-size: 42pt;
+  }
+
+  .storyContent.STATEMENT p {
+    padding: 5em 0 3em 0;
+    font-size: 32pt;
+  }
+
+  .storyContent.STATEMENT p.subtext {
+    display: none;
+  }
+
+  .storyContent-wrapper .navButton {
+    display: none;
+  }
+}

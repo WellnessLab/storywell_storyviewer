@@ -1,0 +1,18 @@
+<div class="storyContent-wrapper {{mode}}">
+  <a class="navButton" (click)="onGoPrev()">
+    <div class="prevButton"></div>
+  </a>
+  <div class="storyContentList">
+    <div *ngFor="let content of storyContents"  class="storyContent {{ content.type }} "
+         [class.selected]="currentContent === content">
+      <div class="instruction"></div>
+      <img src="{{ content.img_url }}" width="100%" alt="" />
+      <p>{{content.text}}</p>
+      <p class="subtext">{{content.subtext}}</p>
+    </div>
+  </div>
+  <a class="navButton" (click)="onGoNext()">
+    <div class="nextButton"></div>
+  </a>
+  <div style="clear: both"></div>
+</div>

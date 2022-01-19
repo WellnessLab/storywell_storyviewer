@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'storywell_storyviewer';
+  mode: string | null = "test";
 }
